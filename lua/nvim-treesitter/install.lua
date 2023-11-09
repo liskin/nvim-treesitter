@@ -173,7 +173,7 @@ end
 ---@return string[]
 local function outdated_parsers()
   return vim.tbl_filter(function(lang) ---@param lang string
-    return is_installed(lang) and needs_update(lang)
+    return needs_update(lang)
   end, info.installed_parsers())
 end
 
